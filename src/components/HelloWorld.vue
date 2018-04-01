@@ -4,7 +4,7 @@
     <h2>How much time do you have left?</h2>
 
     <div class="age">
-      <input class="age-input" id="age" type="text" placeholder="47" maxlength="2" v-model="age">
+      <input class="age-input" id="age" type="number" placeholder="47" v-model="age">
       <label class="age-label" for="age"><span>}</span>age</label>
     </div>
 
@@ -30,6 +30,12 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .age {
