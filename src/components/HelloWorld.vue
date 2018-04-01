@@ -9,8 +9,8 @@
     </div>
 
     <div class="percentage">
-      <div class="percentage-age">{{ Math.floor((age / 79) * 100) }}%</div>
-      <!--<div class="percentage-label">complete</div>-->
+      <span class="percentage-age">{{ Math.floor((age / 79) * 100) }}%</span>
+      <!--<span class="percentage-label"><span>}</span>complete</span>-->
     </div>
   </div>
 </template>
@@ -39,10 +39,8 @@ input::-webkit-inner-spin-button {
 }
 
 .age {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   padding: 36px;
+  margin-left: 72px; /* TODO: better way center align left column? */
 }
 
 .age-input {
@@ -53,7 +51,7 @@ input::-webkit-inner-spin-button {
   line-height: 24px;
   padding: 8px;
   text-align: center;
-  width: 32px;
+  width: 64px;
 }
 
 .age-label {
@@ -68,9 +66,6 @@ input::-webkit-inner-spin-button {
 }
 
 .percentage {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   padding: 36px;
 }
 
@@ -80,8 +75,8 @@ input::-webkit-inner-spin-button {
 }
 
 .percentage-label{
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 48px;
+  line-height: 48px;
 }
 
 .percentage-label span {
