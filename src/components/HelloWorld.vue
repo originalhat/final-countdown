@@ -1,85 +1,17 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <h1>Final Countdown</h1>
+    <h2>How much time do you have left?</h2>
+
+    <div class="age">
+      <input class="age-input" id="age" type="text" placeholder="47" maxlength="2" v-model="age">
+      <label class="age-label" for="age"><span>}</span>age</label>
+    </div>
+
+    <div class="percentage">
+      <div class="percentage-age">{{ Math.floor((age / 79) * 100) }}%</div>
+      <!--<div class="percentage-label">complete</div>-->
+    </div>
   </div>
 </template>
 
@@ -88,7 +20,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      age: 47
     }
   }
 }
@@ -99,14 +31,59 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.age {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 36px;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+.age-input {
+  border: none;
+  border-bottom: 1px solid #e3e3e3;
+  border-radius: 2px;
+  font-size: 24px;
+  line-height: 24px;
+  padding: 8px;
+  text-align: center;
+  width: 32px;
 }
+
+.age-label {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.age-label span {
+  color: #e0e0d0;
+  font-weight: 800;
+  padding: 16px;
+}
+
+.percentage {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+}
+
+.percentage-age {
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.percentage-label{
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.percentage-label span {
+  color: #e0e0d0;
+  font-weight: 800;
+  padding: 16px;
+}
+
 a {
   color: #42b983;
 }
